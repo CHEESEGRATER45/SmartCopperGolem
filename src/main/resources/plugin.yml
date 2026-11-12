@@ -1,0 +1,14 @@
+name: SmartCopperGolem
+version: '${version}'
+main: dev.scg.SmartCopperGolemPlugin
+api-version: '26.1'
+description: Copper golems deliver items to chests by category instead of exact item.
+commands:
+  scg:
+    description: SmartCopperGolem admin command
+    usage: /<command> <reload|stats>
+    permission: smartcoppergolem.admin
+permissions:
+  smartcoppergolem.admin:
+    description: Use /scg
+    default: op

@@ -1,0 +1,16 @@
+transport:
+  # How a golem decides whether a chest "already holds this kind of item":
+  #   CATEGORY - same item, OR any two items in the same category from categories.yml (default)
+  #   ITEM     - same item only (this is what vanilla does)
+  #   EXACT    - same item and same item data (names, enchantments, ...)
+  match-mode: CATEGORY
+
+  # Vanilla golems also drop items into completely empty chests. Set to false to stop that,
+  # so items only go to chests that hold a matching item.
+  # Careful: a golem that finds no matching chest keeps holding its item.
+  allow-empty-containers: true
+
+patch:
+  # How often (ticks, 20 = 1 second) to double-check loaded golems. 0 turns the check off.
+  # Golems are normally patched the moment they load; this only catches stragglers.
+  sweep-interval-ticks: 1200
